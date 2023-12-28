@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div *ngIf="productSave" class="alert alert-success" role="alert">
+    {{message}}
+  </div>
+  <form #addProduct="ngForm"   (ngSubmit)="submit(addProduct.value,addProduct)">
+    <div class="form-group">
+      <h3>Add new product:</h3>
+      <label for="feedbackType">Category:</label>
+
+      <select class="form-control" id="categoryType" name="category" #category="ngModel" ngModel required>
+        <option value="" selected disabled>Select an option</option>
+        <option value="Dairy">Dairy</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Grains">Grains</option>
+        <option value="Frozen foods">Frozen Foods</option>
+        <option value="Fruits">Fruits</option>
+      </select>
+      <p class="invalid-input"><span *ngIf="category.invalid && category.touched">Please select category..</span></p>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Enter product name:</label>
+      <input type="text" class="form-control" id="name" name="name" #name="ngModel" required placeholder="Enter product name.." ngModel>
+      <p class="invalid-input"><span *ngIf="name.invalid && name.touched">Please enter name..</span></p>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" class="form-control" name="price" #price="ngModel" placeholder="Enter Price.." ngModel required>
+      <p class="invalid-input"><span *ngIf="price.invalid && price.touched">Please enter price..</span></p>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="tel" class="form-control" name="description" #description="ngModel" placeholder="Enter description.." ngModel required>
+      <p class="invalid-input"><span *ngIf="description.invalid && description.touched">Please enter description..</span></p>
+
+
+    </div>
+
+    <div class="form-group">
+      <label for="remarks">Images:</label>
+      <textarea class="form-control" id="remarks" name="image" #image="ngModel" rows="2" placeholder="Enter image url." required ngModel></textarea>
+      <p class="invalid-input"><span *ngIf="image.invalid && image.touched">Please enter image url..</span></p>
+
+    </div>
+    <button type="submit" class="btn btn-primary mb-2 " [disabled]="addProduct.invalid">Submit</button>
+    <button type="reset" class="btn btn-secondary ml-3 mb-2" (click)="resetForm(addProduct)">
+      Reset
+    </button>
+  </form>
+</div>
+

@@ -1,0 +1,15 @@
+<body>
+  <h1>Grocery Products</h1>
+
+  <div class="product-container">
+
+<div class="product-card" *ngFor="let item of items" >
+      <img src="{{item.image}}" alt="Product Image" class="product-image">
+      <div class="product-title"> <b>Name</b>:{{item.name}}</div>
+      <div class="product-detail"> <b>Category</b>:{{item.category}}</div>
+      <div class="product-detail"><b>Price</b>:{{item.price}}</div>
+      <div class="product-detail"><b>Description</b>:{{item.description}}</div>
+    </div>
+  </div>
+</body>
+

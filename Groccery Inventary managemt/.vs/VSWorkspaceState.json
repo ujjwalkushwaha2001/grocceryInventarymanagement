@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\groccery_app",
+    "\\groccery_app\\screenshots",
+    "\\groccery_app\\src\\app",
+    "\\groccery_app\\src\\app\\addproduct",
+    "\\groccery_app\\src\\app\\detailpage",
+    "\\groccery_app\\src\\app\\header",
+    "\\groccery_app\\src\\app\\home",
+    "\\groccery_app\\src\\app\\services"
+  ],
+  "SelectedNode": "\\groccery_app\\screenshots\\services.png",
+  "PreviewInSolutionExplorer": false
+}

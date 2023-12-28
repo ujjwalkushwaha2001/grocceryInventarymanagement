@@ -1,0 +1,84 @@
+body {
+  margin: px;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.app-name {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+  .nav-links li {
+    margin-right: 15px;
+  }
+
+    .nav-links li:last-child {
+      margin-right: 0;
+    }
+
+    .nav-links li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+
+      .nav-links li a:hover {
+        color: #ddd;
+      }
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    margin-bottom: 15px;
+  }
+
+  .nav-container {
+    margin-top: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+}
